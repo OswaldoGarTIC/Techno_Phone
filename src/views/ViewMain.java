@@ -46,7 +46,7 @@ public class ViewMain extends javax.swing.JFrame {
         jLabel_Reportes_Ventas = new javax.swing.JLabel();
         jLabel_Ayuda = new javax.swing.JLabel();
         jLabel_Ayuda_AcercaDe = new javax.swing.JLabel();
-        jLabel19 = new javax.swing.JLabel();
+        jLabel_Sandwich = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,6 +56,11 @@ public class ViewMain extends javax.swing.JFrame {
         jLabel_Sesiones.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Sesiones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/usuario.png"))); // NOI18N
         jLabel_Sesiones.setText("Sesiones");
+        jLabel_Sesiones.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_SesionesMouseClicked(evt);
+            }
+        });
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -128,7 +133,7 @@ public class ViewMain extends javax.swing.JFrame {
         jLabel_Ayuda_AcercaDe.setForeground(new java.awt.Color(255, 255, 255));
         jLabel_Ayuda_AcercaDe.setText("Acerda de...");
 
-        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/sandwich.png"))); // NOI18N
+        jLabel_Sandwich.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/sandwich.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -145,7 +150,7 @@ public class ViewMain extends javax.swing.JFrame {
                                 .addGap(23, 23, 23)
                                 .addComponent(jLabel_Sesiones)
                                 .addGap(13, 13, 13)
-                                .addComponent(jLabel19))
+                                .addComponent(jLabel_Sandwich))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(50, 50, 50)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -197,7 +202,7 @@ public class ViewMain extends javax.swing.JFrame {
                         .addComponent(jLabel2)
                         .addGap(11, 11, 11)
                         .addComponent(jLabel_Sesiones))
-                    .addComponent(jLabel19))
+                    .addComponent(jLabel_Sandwich))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel_Sesiones_IniciarSesion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -249,6 +254,10 @@ public class ViewMain extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jLabel_SesionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SesionesMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel_SesionesMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -286,25 +295,25 @@ public class ViewMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel_Ayuda;
-    private javax.swing.JLabel jLabel_Ayuda_AcercaDe;
-    private javax.swing.JLabel jLabel_Catalogos;
-    private javax.swing.JLabel jLabel_Catalogos_Clientes;
-    private javax.swing.JLabel jLabel_Catalogos_Productos;
-    private javax.swing.JLabel jLabel_Catalogos_Proveedores;
-    private javax.swing.JLabel jLabel_Operaciones;
-    private javax.swing.JLabel jLabel_Operaciones_Compras;
-    private javax.swing.JLabel jLabel_Operaciones_Ventas;
-    private javax.swing.JLabel jLabel_Reportes;
-    private javax.swing.JLabel jLabel_Reportes_Clientes;
-    private javax.swing.JLabel jLabel_Reportes_Productos;
-    private javax.swing.JLabel jLabel_Reportes_Proveedores;
-    private javax.swing.JLabel jLabel_Reportes_Ventas;
-    private javax.swing.JLabel jLabel_Sesiones;
-    private javax.swing.JLabel jLabel_Sesiones_IniciarSesion;
-    private javax.swing.JLabel jLabel_Sesiones_Usuarios;
+    public javax.swing.JLabel jLabel_Ayuda;
+    public javax.swing.JLabel jLabel_Ayuda_AcercaDe;
+    public javax.swing.JLabel jLabel_Catalogos;
+    public javax.swing.JLabel jLabel_Catalogos_Clientes;
+    public javax.swing.JLabel jLabel_Catalogos_Productos;
+    public javax.swing.JLabel jLabel_Catalogos_Proveedores;
+    public javax.swing.JLabel jLabel_Operaciones;
+    public javax.swing.JLabel jLabel_Operaciones_Compras;
+    public javax.swing.JLabel jLabel_Operaciones_Ventas;
+    public javax.swing.JLabel jLabel_Reportes;
+    public javax.swing.JLabel jLabel_Reportes_Clientes;
+    public javax.swing.JLabel jLabel_Reportes_Productos;
+    public javax.swing.JLabel jLabel_Reportes_Proveedores;
+    public javax.swing.JLabel jLabel_Reportes_Ventas;
+    public javax.swing.JLabel jLabel_Sandwich;
+    public javax.swing.JLabel jLabel_Sesiones;
+    public javax.swing.JLabel jLabel_Sesiones_IniciarSesion;
+    public javax.swing.JLabel jLabel_Sesiones_Usuarios;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
