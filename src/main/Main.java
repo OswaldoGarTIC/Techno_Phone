@@ -5,10 +5,28 @@
  */
 package main;
 
+import controllers.*;
+import models.*;
+import views.*;
 /**
  *
  * @author BLABPC23
  */
 public class Main {
-    
+    public static void main(String[]Gary){
+        Object modules[] = new Object[2];
+        
+        ModelProveedores modelProveedores = new ModelProveedores();
+        //ViewProveedores viewProveedores = new ViewProveedores();
+        ControllerProveedores controllerProveedores = new ControllerProveedores();
+        
+        ControllerProductos controllerProductos = new ControllerProductos();
+        
+        modules[0] = controllerProductos;
+        modules[1] = controllerProveedores;
+        
+        ModelMain modelMain = new ModelMain();
+        ViewMain viewMain = new ViewMain();
+        ControllerMain controllerMain = new ControllerMain(modelMain, viewMain, modules);
+    }
 }

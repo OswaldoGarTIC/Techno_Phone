@@ -19,6 +19,8 @@ import views.ViewMain;
 public class ControllerMain {
     ModelMain modelMain;
     ViewMain viewMain;
+    ControllerProductos controllerProductos;
+    ControllerProveedores controllerProveedores;
     
     Object modules[];
     
@@ -30,7 +32,8 @@ public class ControllerMain {
         
         viewMain.jLabel_Ayuda.addMouseListener(mouseAdapter);
         
-        //controllerAbout = (ControllerAbout)modules[0];
+        controllerProductos = (ControllerProductos)modules[0];
+        controllerProveedores = (ControllerProveedores)modules[1];
         
         initView();
     }
