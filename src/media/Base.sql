@@ -1,5 +1,5 @@
-create database acme_store;
-use acme_store;
+create database tecno_phone;
+use tecno_phone;
 
 create table clientes(
 	id_cliente int(4) not null AUTO_INCREMENT,
