@@ -26,7 +26,7 @@ public class ControllerMain {
     
     //ControllerAbout controllerAbout;
     
-    public ControllerMain(ModelMain modelMain,ViewMain viewMain,Object modelues[]){
+    public ControllerMain(ModelMain modelMain,ViewMain viewMain,Object modules[]){
         this.modelMain = modelMain;
         this.viewMain = viewMain;
         
@@ -48,6 +48,6 @@ public class ControllerMain {
     };
     
     private void initView(){
-        
+        System.out.println("texto");
     }
 }
