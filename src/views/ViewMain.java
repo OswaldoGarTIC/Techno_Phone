@@ -92,7 +92,7 @@ public class ViewMain extends javax.swing.JFrame {
 
         jLabel_Catalogos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel_Catalogos.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel_Catalogos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/Catalogos.png"))); // NOI18N
+        jLabel_Catalogos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/catalogo.png"))); // NOI18N
         jLabel_Catalogos.setText("Catalogos");
 
         jLabel_Operaciones_Ventas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
