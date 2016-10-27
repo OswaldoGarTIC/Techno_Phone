@@ -48,6 +48,8 @@ public class ControllerMain {
     };
     
     private void initView(){
-        System.out.println("texto");
+        viewMain.setTitle("TecnoPhone");
+        viewMain.setLocationRelativeTo(null);
+        viewMain.setVisible(true);
     }
 }
