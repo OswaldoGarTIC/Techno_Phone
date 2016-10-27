@@ -7,12 +7,12 @@ package views;
 
 /**
  *
- * @author Compurent
+ * @author BLABPC23
  */
 public class ViewMain extends javax.swing.JFrame {
 
     /**
-     * Creates new form ViewMain
+     * Creates new form NewJFrame
      */
     public ViewMain() {
         initComponents();
@@ -28,105 +28,107 @@ public class ViewMain extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel_Sesiones = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel18 = new javax.swing.JLabel();
+        jLabel_Sesiones_IniciarSesion = new javax.swing.JLabel();
+        jLabel_Sesiones_Usuarios = new javax.swing.JLabel();
+        jLabel_Operaciones = new javax.swing.JLabel();
+        jLabel_Catalogos_Clientes = new javax.swing.JLabel();
+        jLabel_Catalogos_Productos = new javax.swing.JLabel();
+        jLabel_Catalogos_Proveedores = new javax.swing.JLabel();
+        jLabel_Catalogos = new javax.swing.JLabel();
+        jLabel_Operaciones_Ventas = new javax.swing.JLabel();
+        jLabel_Operaciones_Compras = new javax.swing.JLabel();
+        jLabel_Reportes = new javax.swing.JLabel();
+        jLabel_Reportes_Proveedores = new javax.swing.JLabel();
+        jLabel_Reportes_Productos = new javax.swing.JLabel();
+        jLabel_Reportes_Clientes = new javax.swing.JLabel();
+        jLabel_Reportes_Ventas = new javax.swing.JLabel();
+        jLabel_Ayuda = new javax.swing.JLabel();
+        jLabel_Ayuda_AcercaDe = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
 
-        jLabel1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\Compurent\\Desktop\\user.png")); // NOI18N
-        jLabel1.setText("Sesiones");
+        jLabel_Sesiones.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel_Sesiones.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Sesiones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/usuario.png"))); // NOI18N
+        jLabel_Sesiones.setText("Sesiones");
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\Compurent\\Desktop\\sandwich.png")); // NOI18N
 
-        jLabel3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel3.setText("Iniciar Sesion");
+        jLabel_Sesiones_IniciarSesion.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_Sesiones_IniciarSesion.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Sesiones_IniciarSesion.setText("Iniciar Sesion");
 
-        jLabel4.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("Usuarios");
+        jLabel_Sesiones_Usuarios.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_Sesiones_Usuarios.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Sesiones_Usuarios.setText("Usuarios");
 
-        jLabel5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setIcon(new javax.swing.ImageIcon("C:\\Users\\Compurent\\Desktop\\user.png")); // NOI18N
-        jLabel5.setText("Operaciones");
+        jLabel_Operaciones.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel_Operaciones.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Operaciones.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/operaciones.png"))); // NOI18N
+        jLabel_Operaciones.setText("Operaciones");
 
-        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("Clientes");
+        jLabel_Catalogos_Clientes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_Catalogos_Clientes.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Catalogos_Clientes.setText("Clientes");
 
-        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setText("Productos");
+        jLabel_Catalogos_Productos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_Catalogos_Productos.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Catalogos_Productos.setText("Productos");
 
-        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setText("Proveedores");
+        jLabel_Catalogos_Proveedores.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_Catalogos_Proveedores.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Catalogos_Proveedores.setText("Proveedores");
 
-        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel9.setIcon(new javax.swing.ImageIcon("C:\\Users\\Compurent\\Desktop\\user.png")); // NOI18N
-        jLabel9.setText("Catalogos");
+        jLabel_Catalogos.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel_Catalogos.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Catalogos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/Catalogos.png"))); // NOI18N
+        jLabel_Catalogos.setText("Catalogos");
 
-        jLabel10.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel10.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel10.setText("Ventas");
+        jLabel_Operaciones_Ventas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_Operaciones_Ventas.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Operaciones_Ventas.setText("Ventas");
 
-        jLabel11.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setText("Compras");
+        jLabel_Operaciones_Compras.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_Operaciones_Compras.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Operaciones_Compras.setText("Compras");
 
-        jLabel12.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel12.setIcon(new javax.swing.ImageIcon("C:\\Users\\Compurent\\Desktop\\user.png")); // NOI18N
-        jLabel12.setText("Reportes");
+        jLabel_Reportes.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel_Reportes.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Reportes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/reportes.png"))); // NOI18N
+        jLabel_Reportes.setText("Reportes");
 
-        jLabel13.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Proveedores");
+        jLabel_Reportes_Proveedores.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_Reportes_Proveedores.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Reportes_Proveedores.setText("Proveedores");
 
-        jLabel14.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Productos");
+        jLabel_Reportes_Productos.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_Reportes_Productos.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Reportes_Productos.setText("Productos");
 
-        jLabel15.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel15.setText("Clientes");
+        jLabel_Reportes_Clientes.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_Reportes_Clientes.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Reportes_Clientes.setText("Clientes");
 
-        jLabel16.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel16.setText("Ventas");
+        jLabel_Reportes_Ventas.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_Reportes_Ventas.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Reportes_Ventas.setText("Ventas");
 
-        jLabel17.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel17.setIcon(new javax.swing.ImageIcon("C:\\Users\\Compurent\\Desktop\\user.png")); // NOI18N
-        jLabel17.setText("Ayuda");
+        jLabel_Ayuda.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel_Ayuda.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Ayuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/ayuda.png"))); // NOI18N
+        jLabel_Ayuda.setText("Ayuda");
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel18.setText("Acerda de...");
+        jLabel_Ayuda_AcercaDe.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel_Ayuda_AcercaDe.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_Ayuda_AcercaDe.setText("Acerda de...");
+
+        jLabel19.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/sandwich.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -141,18 +143,21 @@ public class ViewMain extends javax.swing.JFrame {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(23, 23, 23)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel5)
-                                    .addComponent(jLabel1)
-                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel12)
-                                        .addComponent(jLabel17, javax.swing.GroupLayout.Alignment.LEADING))))
+                                .addComponent(jLabel_Sesiones)
+                                .addGap(13, 13, 13)
+                                .addComponent(jLabel19))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(50, 50, 50)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel11)
-                                    .addComponent(jLabel10))))
-                        .addGap(0, 10, Short.MAX_VALUE)))
+                                    .addComponent(jLabel_Operaciones_Compras)
+                                    .addComponent(jLabel_Operaciones_Ventas)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(45, 45, 45)
+                                .addComponent(jLabel_Ayuda_AcercaDe))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel_Operaciones)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
@@ -160,66 +165,72 @@ public class ViewMain extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING))
-                            .addComponent(jLabel9)
+                                .addComponent(jLabel_Catalogos_Clientes, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel_Catalogos_Productos, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel_Catalogos_Proveedores, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addComponent(jLabel_Catalogos)
                             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel4)
-                                .addComponent(jLabel3)))
+                                .addComponent(jLabel_Sesiones_Usuarios)
+                                .addComponent(jLabel_Sesiones_IniciarSesion)))
                         .addGap(37, 37, 37))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel_Reportes)
+                        .addGap(50, 50, 50))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.Alignment.LEADING))
-                        .addGap(36, 36, 36))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel18)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addComponent(jLabel_Reportes_Clientes, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel_Reportes_Productos, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel_Reportes_Proveedores, javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel_Reportes_Ventas, javax.swing.GroupLayout.Alignment.LEADING))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jLabel_Ayuda)
+                                .addGap(36, 36, 36)))
+                        .addGap(35, 35, 35))))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel2)
-                .addGap(11, 11, 11)
-                .addComponent(jLabel1)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel2)
+                        .addGap(11, 11, 11)
+                        .addComponent(jLabel_Sesiones))
+                    .addComponent(jLabel19))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel3)
+                .addComponent(jLabel_Sesiones_IniciarSesion)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addComponent(jLabel_Sesiones_Usuarios)
                 .addGap(16, 16, 16)
-                .addComponent(jLabel9)
+                .addComponent(jLabel_Catalogos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
+                .addComponent(jLabel_Catalogos_Clientes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel7)
+                .addComponent(jLabel_Catalogos_Productos)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
-                .addGap(23, 23, 23)
-                .addComponent(jLabel5)
+                .addComponent(jLabel_Catalogos_Proveedores)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel_Operaciones)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel_Operaciones_Compras)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel11)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel10)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel14)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel16)
+                .addComponent(jLabel_Operaciones_Ventas)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel17)
+                .addComponent(jLabel_Reportes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel18)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addComponent(jLabel_Reportes_Clientes)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel_Reportes_Productos)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel_Reportes_Proveedores)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel_Reportes_Ventas)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel_Ayuda)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel_Ayuda_AcercaDe)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -228,7 +239,7 @@ public class ViewMain extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 716, Short.MAX_VALUE))
+                .addContainerGap(516, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -264,6 +275,7 @@ public class ViewMain extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(ViewMain.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -274,24 +286,25 @@ public class ViewMain extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JLabel jLabel_Ayuda;
+    private javax.swing.JLabel jLabel_Ayuda_AcercaDe;
+    private javax.swing.JLabel jLabel_Catalogos;
+    private javax.swing.JLabel jLabel_Catalogos_Clientes;
+    private javax.swing.JLabel jLabel_Catalogos_Productos;
+    private javax.swing.JLabel jLabel_Catalogos_Proveedores;
+    private javax.swing.JLabel jLabel_Operaciones;
+    private javax.swing.JLabel jLabel_Operaciones_Compras;
+    private javax.swing.JLabel jLabel_Operaciones_Ventas;
+    private javax.swing.JLabel jLabel_Reportes;
+    private javax.swing.JLabel jLabel_Reportes_Clientes;
+    private javax.swing.JLabel jLabel_Reportes_Productos;
+    private javax.swing.JLabel jLabel_Reportes_Proveedores;
+    private javax.swing.JLabel jLabel_Reportes_Ventas;
+    private javax.swing.JLabel jLabel_Sesiones;
+    private javax.swing.JLabel jLabel_Sesiones_IniciarSesion;
+    private javax.swing.JLabel jLabel_Sesiones_Usuarios;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
