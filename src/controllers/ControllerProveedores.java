@@ -5,10 +5,20 @@
  */
 package controllers;
 
+import models.ModelProveedores;
+import views.ViewProveedores;
 /**
  *
  * @author BLABPC23
  */
 public class ControllerProveedores {
+    ModelProveedores modelProveedores;
+    ViewProveedores viewsProveedores;
+    
+    public ControllerProveedores(ModelProveedores modelProveedores,ViewProveedores viewsProveedores){
+        this.modelProveedores = modelProveedores;
+        this.viewsProveedores = viewsProveedores;
+        
+    }
     
 }

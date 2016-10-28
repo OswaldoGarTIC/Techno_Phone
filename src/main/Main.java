@@ -17,8 +17,8 @@ public class Main {
         Object modules[] = new Object[2];
         
         ModelProveedores modelProveedores = new ModelProveedores();
-        //ViewProveedores viewProveedores = new ViewProveedores();
-        ControllerProveedores controllerProveedores = new ControllerProveedores();
+        ViewProveedores viewProveedores = new ViewProveedores();
+        ControllerProveedores controllerProveedores = new ControllerProveedores(modelProveedores,viewProveedores);
         
         ControllerProductos controllerProductos = new ControllerProductos();
         

@@ -9,12 +9,12 @@ package views;
  *
  * @author Compurent
  */
-public class Proveedores extends javax.swing.JPanel {
+public class ViewProveedores extends javax.swing.JPanel {
 
     /**
      * Creates new form Proveedores
      */
-    public Proveedores() {
+    public ViewProveedores() {
         initComponents();
     }
 

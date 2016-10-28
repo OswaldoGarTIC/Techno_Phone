@@ -9,6 +9,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.awt.event.MouseListener;
 import javax.swing.JOptionPane;
 import models.ModelMain;
 import views.ViewMain;
@@ -16,7 +17,7 @@ import views.ViewMain;
  *
  * @author BLABPC23
  */
-public class ControllerMain {
+public class ControllerMain{
     ModelMain modelMain;
     ViewMain viewMain;
     ControllerProductos controllerProductos;
@@ -30,7 +31,8 @@ public class ControllerMain {
         this.modelMain = modelMain;
         this.viewMain = viewMain;
         
-        viewMain.jLabel_Ayuda.addMouseListener(mouseAdapter);
+        viewMain.jLabel_Ayuda.addMouseListener(ActionPerformed_jLabel_Ayuda);
+        viewMain.jLabel_Ayuda_AcercaDe.addMouseListener(ActionPerformed_jLabel_Ayuda_AcercaDe);
         
         controllerProductos = (ControllerProductos)modules[0];
         controllerProveedores = (ControllerProveedores)modules[1];
@@ -38,11 +40,22 @@ public class ControllerMain {
         initView();
     }
     
-    MouseAdapter mouseAdapter = new MouseAdapter(){
+    MouseAdapter ActionPerformed_jLabel_Ayuda = new MouseAdapter(){
         public void mouseClicked(MouseEvent evt){
                 int count = evt.getClickCount();
-                if (count == 2){
-                    System.out.println("Doble clic");
+                if (count == 1){
+                    viewMain.setContentPane(controllerProveedores.viewsProveedores);
+                    viewMain.revalidate();
+                    viewMain.repaint();
+                    System.out.println("Ayuda");
+                }
+        }
+    };
+    MouseAdapter ActionPerformed_jLabel_Ayuda_AcercaDe = new MouseAdapter(){
+        public void mouseClicked(MouseEvent evt){
+                int count = evt.getClickCount();
+                if (count == 1){
+                    System.out.println("Acerda de...");
                 }
         }
     };
