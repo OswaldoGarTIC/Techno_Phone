@@ -60,7 +60,7 @@ public class ControllerMain{
     MouseAdapter ActionPerformed_jLabels = new MouseAdapter(){
         public void mouseClicked(MouseEvent evt){
             JLabel jlabel = (JLabel) evt.getComponent();
-            jlabel.setForeground(Color.white);
+            jlabel.setForeground(Color.darkGray);
         }
         public void mouseEntered(MouseEvent men){
             JLabel jlabel = (JLabel) men.getComponent();
