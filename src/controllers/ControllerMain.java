@@ -5,12 +5,15 @@
  */
 package controllers;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
+import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 import models.ModelMain;
 import views.ViewMain;
 /**
@@ -25,41 +28,34 @@ public class ControllerMain{
     
     Object modules[];
     
-    //ControllerAbout controllerAbout;
-    
     public ControllerMain(ModelMain modelMain,ViewMain viewMain,Object modules[]){
         this.modelMain = modelMain;
         this.viewMain = viewMain;
-        
-        viewMain.jLabel_Ayuda.addMouseListener(ActionPerformed_jLabel_Ayuda);
-        viewMain.jLabel_Ayuda_AcercaDe.addMouseListener(ActionPerformed_jLabel_Ayuda_AcercaDe);
         
         controllerProductos = (ControllerProductos)modules[0];
         controllerProveedores = (ControllerProveedores)modules[1];
         
         initView();
+        mouseListener();
     }
-    
-    MouseAdapter ActionPerformed_jLabel_Ayuda = new MouseAdapter(){
+    private void mouseListener(){
+        viewMain.jLabel_Ayuda.addMouseListener(ActionPerformed_jLabels);
+    }
+    MouseAdapter ActionPerformed_jLabels = new MouseAdapter(){
         public void mouseClicked(MouseEvent evt){
-                int count = evt.getClickCount();
-                if (count == 1){
-                    viewMain.setContentPane(controllerProveedores.viewsProveedores);
-                    viewMain.revalidate();
-                    viewMain.repaint();
-                    System.out.println("Ayuda");
-                }
+            JLabel jlabel = (JLabel) evt.getComponent();
+            jlabel.setForeground(Color.black);
+        }
+        public void mouseEntered(MouseEvent men){
+            JLabel jlabel = (JLabel) men.getComponent();
+            jlabel.setForeground(Color.gray);
+        }
+        public void mouseExited(MouseEvent mle){
+            JLabel jlabel = (JLabel) mle.getComponent();
+            jlabel.setForeground(Color.white);
         }
     };
-    MouseAdapter ActionPerformed_jLabel_Ayuda_AcercaDe = new MouseAdapter(){
-        public void mouseClicked(MouseEvent evt){
-                int count = evt.getClickCount();
-                if (count == 1){
-                    System.out.println("Acerda de...");
-                }
-        }
-    };
-    
+
     private void initView(){
         viewMain.setTitle("TecnoPhone");
         viewMain.setLocationRelativeTo(null);
