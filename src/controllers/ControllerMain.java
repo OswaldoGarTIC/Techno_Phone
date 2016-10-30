@@ -40,11 +40,27 @@ public class ControllerMain{
     }
     private void mouseListener(){
         viewMain.jLabel_Ayuda.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Ayuda_AcercaDe.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Catalogos.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Catalogos_Clientes.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Catalogos_Productos.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Catalogos_Proveedores.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Operaciones.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Operaciones_Compras.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Operaciones_Ventas.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Reportes.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Reportes_Clientes.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Reportes_Productos.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Reportes_Proveedores.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Reportes_Ventas.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Sesiones.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Sesiones_IniciarSesion.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Sesiones_Usuarios.addMouseListener(ActionPerformed_jLabels);
     }
     MouseAdapter ActionPerformed_jLabels = new MouseAdapter(){
         public void mouseClicked(MouseEvent evt){
             JLabel jlabel = (JLabel) evt.getComponent();
-            jlabel.setForeground(Color.black);
+            jlabel.setForeground(Color.white);
         }
         public void mouseEntered(MouseEvent men){
             JLabel jlabel = (JLabel) men.getComponent();
