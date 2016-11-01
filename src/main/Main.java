@@ -6,6 +6,7 @@
 package main;
 
 import controllers.*;
+import java.sql.SQLException;
 import models.*;
 import views.*;
 /**
@@ -13,7 +14,7 @@ import views.*;
  * @author BLABPC23
  */
 public class Main {
-    public static void main(String[]Gary){
+    public static void main(String[]Gary) throws SQLException{
         Object modules[] = new Object[2];
         
         ModelProveedores modelProveedores = new ModelProveedores();
