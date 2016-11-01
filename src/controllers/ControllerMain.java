@@ -15,14 +15,17 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import models.ModelMain;
-import views.ViewMain;
+import sax.DBConnection;
+import views.*;
 /**
  *
- * @author BLABPC23
+ * @author MarGaryIto
  */
 public class ControllerMain{
+    private final DBConnection conection = new DBConnection(3306,"localhost", "tecno_phone", "root", "1234");
     ModelMain modelMain;
     ViewMain viewMain;
+    ViewProveedores viewProveedores;
     ControllerProductos controllerProductos;
     ControllerProveedores controllerProveedores;
     
@@ -59,6 +62,9 @@ public class ControllerMain{
     }
     MouseAdapter ActionPerformed_jLabels = new MouseAdapter(){
         public void mouseClicked(MouseEvent evt){
+            if(evt.getComponent()==viewMain.jLabel_Catalogos_Proveedores){
+                jLabel_Catalogos_Proveedores_ActionPerformed();
+            }
             JLabel jlabel = (JLabel) evt.getComponent();
             jlabel.setForeground(Color.darkGray);
         }
@@ -76,5 +82,11 @@ public class ControllerMain{
         viewMain.setTitle("TecnoPhone");
         viewMain.setLocationRelativeTo(null);
         viewMain.setVisible(true);
+    }
+    
+    public void jLabel_Catalogos_Proveedores_ActionPerformed(){
+        this.viewMain.setContentPane(controllerProveedores.viewsProveedores);
+        this.viewMain.revalidate();
+        this.viewMain.repaint();
     }
 }

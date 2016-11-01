@@ -5,12 +5,13 @@
  */
 package views;
 
+
 /**
  *
  * @author BLABPC23
  */
 public class ViewMain extends javax.swing.JFrame {
-
+    
     /**
      * Creates new form NewJFrame
      */
@@ -263,7 +264,7 @@ public class ViewMain extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jLabel_SesionesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SesionesMouseClicked
-        // TODO add your handling code here:
+        
     }//GEN-LAST:event_jLabel_SesionesMouseClicked
 
     private void jLabel_AyudaMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_AyudaMouseEntered
