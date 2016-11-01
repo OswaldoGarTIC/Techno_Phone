@@ -6,23 +6,16 @@
 package controllers;
 
 import java.awt.Color;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import javax.swing.JLabel;
-import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 import models.ModelMain;
-import sax.DBConnection;
 import views.*;
 /**
  *
  * @author MarGaryIto
  */
 public class ControllerMain{
-    private final DBConnection conection = new DBConnection(3306,"localhost", "tecno_phone", "root", "1234");
     ModelMain modelMain;
     ViewMain viewMain;
     ViewProveedores viewProveedores;
@@ -61,6 +54,7 @@ public class ControllerMain{
         viewMain.jLabel_Sesiones_Usuarios.addMouseListener(ActionPerformed_jLabels);
     }
     MouseAdapter ActionPerformed_jLabels = new MouseAdapter(){
+        @Override
         public void mouseClicked(MouseEvent evt){
             if(evt.getComponent()==viewMain.jLabel_Catalogos_Proveedores){
                 jLabel_Catalogos_Proveedores_ActionPerformed();
@@ -68,10 +62,12 @@ public class ControllerMain{
             JLabel jlabel = (JLabel) evt.getComponent();
             jlabel.setForeground(Color.darkGray);
         }
+        @Override
         public void mouseEntered(MouseEvent men){
             JLabel jlabel = (JLabel) men.getComponent();
             jlabel.setForeground(Color.gray);
         }
+        @Override
         public void mouseExited(MouseEvent mle){
             JLabel jlabel = (JLabel) mle.getComponent();
             jlabel.setForeground(Color.white);

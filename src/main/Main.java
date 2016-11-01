@@ -11,7 +11,7 @@ import models.*;
 import views.*;
 /**
  *
- * @author BLABPC23
+ * @author MarGaryIto
  */
 public class Main {
     public static void main(String[]Gary) throws SQLException{

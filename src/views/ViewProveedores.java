@@ -14,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Compurent
+ * @author MarGaryIto
  */
 public class ViewProveedores extends javax.swing.JPanel {
 

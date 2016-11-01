@@ -60,6 +60,10 @@ create table proveedores(
 	e_mail varchar(40) not null
 	)ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+insert into proveedores values(1,"nombre","RFC","calle",0,"colonia","ciudad","estado","nombre",775,"email");
+insert into proveedores values(2,"nombre","RFC","calle",0,"colonia","ciudad","estado","nombre",775,"email");
+insert into proveedores values(3,"nombre","RFC","calle",0,"colonia","ciudad","estado","nombre",775,"email");
+
 create table compras(
 	id_compra int(4) not null AUTO_INCREMENT primary key,
 	fecha date not null,

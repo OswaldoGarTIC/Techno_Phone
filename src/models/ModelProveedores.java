@@ -7,7 +7,7 @@ package models;
 
 /**
  *
- * @author BLABPC23
+ * @author MarGaryIto
  */
 public class ModelProveedores {
     

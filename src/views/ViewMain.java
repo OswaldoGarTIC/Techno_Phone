@@ -8,7 +8,7 @@ package views;
 
 /**
  *
- * @author BLABPC23
+ * @author MarGaryIto
  */
 public class ViewMain extends javax.swing.JFrame {
     
