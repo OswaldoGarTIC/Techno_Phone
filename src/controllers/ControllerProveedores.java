@@ -13,12 +13,14 @@ import views.ViewProveedores;
  */
 public class ControllerProveedores {
     ModelProveedores modelProveedores;
-    ViewProveedores viewsProveedores;
+    ViewProveedores viewProveedores;
     
     public ControllerProveedores(ModelProveedores modelProveedores,ViewProveedores viewsProveedores){
         this.modelProveedores = modelProveedores;
-        this.viewsProveedores = viewsProveedores;
-        
+        this.viewProveedores = viewProveedores;
+        initView();
     }
-    
+    private void initView(){
+        viewProveedores.setVisible(true);
+    }
 }

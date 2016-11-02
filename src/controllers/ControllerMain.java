@@ -81,7 +81,7 @@ public class ControllerMain{
     }
     
     public void jLabel_Catalogos_Proveedores_ActionPerformed(){
-        this.viewMain.setContentPane(controllerProveedores.viewsProveedores);
+        this.viewMain.setContentPane(controllerProveedores.viewProveedores);
         this.viewMain.revalidate();
         this.viewMain.repaint();
     }
