@@ -8,9 +8,17 @@ package controllers;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.util.Arrays;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import models.ModelMain;
 import views.*;
+import mysql.Conexion;
 /**
  *
  * @author MarGaryIto
@@ -21,8 +29,12 @@ public class ControllerMain{
     ViewProveedores viewProveedores;
     ControllerProductos controllerProductos;
     ControllerProveedores controllerProveedores;
+    ControllerClientes controllerClientes;
+    Conexion conexion;
     
     Object modules[];
+    
+    mysql.Conexion con = new mysql.Conexion();
     
     public ControllerMain(ModelMain modelMain,ViewMain viewMain,Object modules[]){
         this.modelMain = modelMain;
@@ -52,12 +64,16 @@ public class ControllerMain{
         viewMain.jLabel_Sesiones.addMouseListener(ActionPerformed_jLabels);
         viewMain.jLabel_Sesiones_IniciarSesion.addMouseListener(ActionPerformed_jLabels);
         viewMain.jLabel_Sesiones_Usuarios.addMouseListener(ActionPerformed_jLabels);
+        viewMain.jLabel_Aceptar.addMouseListener(ActionPerformed_jLabels);
     }
     MouseAdapter ActionPerformed_jLabels = new MouseAdapter(){
         @Override
         public void mouseClicked(MouseEvent evt){
             if(evt.getComponent()==viewMain.jLabel_Catalogos_Proveedores){
                 jLabel_Catalogos_Proveedores_ActionPerformed();
+            }
+            if(evt.getComponent()==viewMain.jLabel_Aceptar){
+                tryLogg();
             }
             JLabel jlabel = (JLabel) evt.getComponent();
             jlabel.setForeground(Color.darkGray);
@@ -84,5 +100,31 @@ public class ControllerMain{
         this.viewMain.setContentPane(controllerProveedores.viewProveedores);
         this.viewMain.revalidate();
         this.viewMain.repaint();
+    }
+    public void jLabel_Catalogos_Clientes_ActionPerformed(){
+        this.viewMain.setContentPane(controllerProveedores.viewProveedores);
+        this.viewMain.revalidate();
+        this.viewMain.repaint();
+    }
+    public void tryLogg(){
+        if(viewMain.jLabel_Sesiones_Usuarios.getText().length()>0 && viewMain.jPasswordField_Contrasena.getPassword().length>0){
+        try{
+            Connection con = Db.connect();
+            Statement s =  con.createStatement();
+            ResultSet r = s.executeQuery("select * from usuarios where nombre=\""+viewMain.jLabel_Sesiones_Usuarios.getText()+"\" and contrasena=\""+viewMain.jPasswordField_Contrasena.getPassword()+"\" ");
+            boolean found = false;
+            int user_id = 0;
+            while(r.next()){ found=true; user_id = r.getInt("id"); }
+            if(found){
+                JOptionPane.showMessageDialog(viewMain, "Acceso correcto");
+            }else{
+                JOptionPane.showMessageDialog(viewMain, "Usuario o contraseña incorrectos");
+            }
+        }catch(SQLException e){
+        System.out.println(e.getMessage());
+        }
+        }else{
+            JOptionPane.showMessageDialog(viewMain, "No debes dejar campos vacios !!");        
+        }
     }
 }

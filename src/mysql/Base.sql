@@ -1,6 +1,14 @@
 create database tecno_phone;
 use tecno_phone;
 
+create table usuarios(
+        id_usuario int(4) not null auto_increment primary key,
+        nombre varchar(30) not null,
+        contrasena varchar(30) not null
+);
+
+insert into usuarios(nombre,contrasena) values("margarito","1234");
+
 create table clientes(
 	id_cliente int(4) not null AUTO_INCREMENT primary key,
 	nombre varchar(20) not null,
@@ -49,15 +57,15 @@ create table detalle_ventas(
 create table proveedores(
 	id_proveedor int(4) not null AUTO_INCREMENT primary key,
 	nombre varchar(30) not null,
-	RFC varchar(15) not null,
-	calle varchar(20) not null,
-	No int(5) not null,
-	colonia varchar(20) not null,
-	ciudad varchar(20) not null,
-	estado varchar(20) not null,
-	nombre_contacto varchar(70) not null,
-	telefono int(15) not null,
-	e_mail varchar(40) not null
+	RFC varchar(15),
+	calle varchar(20),
+	No int(5),
+	colonia varchar(20),
+	ciudad varchar(20),
+	estado varchar(20),
+	nombre_contacto varchar(70),
+	telefono int(15),
+	e_mail varchar(40)
 	)ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 insert into proveedores values(1,"nombre","RFC","calle",0,"colonia","ciudad","estado","nombre",775,"email");

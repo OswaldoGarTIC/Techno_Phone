@@ -11,4 +11,20 @@ package models;
  * @author MarGaryIto
  */
 public class ModelMain {
+    private String usuario="";
+
+    /**
+     * @return the usuario
+     */
+    public String getUsuario() {
+        return usuario;
+    }
+
+    /**
+     * @param usuario the usuario to set
+     */
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+    
 }
