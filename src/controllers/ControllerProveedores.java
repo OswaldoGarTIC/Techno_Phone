@@ -156,9 +156,9 @@ public class ControllerProveedores {
         //
     }
     private void sandwichActionPerformed(){
-        this.viewMain.setContentPane(controllerMain.viewMain);
-        this.viewMain.revalidate();
-        this.viewMain.repaint();
+        this.viewMain.setContentPane(null);
+        viewMain.revalidate();
+        viewMain.repaint();
     }
     private void mostrarPanelMedio(){
         if(viewProveedores.jPanel_Medio.isVisible()){
