@@ -8,8 +8,10 @@ package controllers;
 import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.sql.PreparedStatement;
+import java.sql.Connection;
+import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
@@ -53,16 +55,23 @@ public class ControllerProveedores {
                 tarea = "conexion";
                 mostrarPanelMedio();
             }else if(evt.getComponent()==viewProveedores.jLabel_Agregar){
+                mostrarTodo();
+                ocultarId();
                 tarea = "agregar";
                 mostrarPanelMedio();
             }else if(evt.getComponent()==viewProveedores.jLabe_lEditar){
+                mostrarTodo();
+                ocultarTodoMenosId();
                 tarea="editar";
                 mostrarPanelMedio();
             }
             else if(evt.getComponent()==viewProveedores.jLabel_Eliminar){
+                mostrarTodo();
+                ocultarTodoMenosId();
                 tarea = "eliminar";
                 mostrarPanelMedio();
             }else if(evt.getComponent()==viewProveedores.jLabel_Buscar){
+                mostrarTodo();
                 tarea = "buscar";
                 mostrarPanelMedio();
             }
@@ -90,7 +99,7 @@ public class ControllerProveedores {
                 {
                     try {
                         agregar();
-                    } catch (SQLException ex) {
+                    } catch (SQLException | ClassNotFoundException | InstantiationException | IllegalAccessException ex) {
                         Logger.getLogger(ControllerProveedores.class.getName()).log(Level.SEVERE, null, ex);
                     }
                 }
@@ -133,11 +142,30 @@ public class ControllerProveedores {
             sandwichActionPerformed();
         }
     };
-    private void agregar() throws SQLException{    
-        String nombre=this.viewProveedores.jLabel_nombre.getText();
-        String sql = "insert into proveedores(nombre) values ('"+nombre+"');";
-        PreparedStatement us = con.conexion().prepareStatement(sql);
-        us.executeQuery();
+    private void agregar() throws SQLException, ClassNotFoundException, InstantiationException, IllegalAccessException{    
+        String id_proveedor = viewProveedores.jLabel_idproveedor.getText();
+        String nombre = viewProveedores.jTextField_nombre.getText();
+        String rfc = viewProveedores.jTextField_rfc.getText();
+        String calle = viewProveedores.jTextField_calle.getText();
+        String no = viewProveedores.jTextField_numero.getText();
+        String colonia = viewProveedores.jTextField_colonia.getText();
+        String ciudad = viewProveedores.jTextField_ciudad.getText();
+        String estado = viewProveedores.jTextField_estado.getText();
+        String nombre_contacto = viewProveedores.jTextField_nombrecontacto.getText();
+        String telefono = viewProveedores.jTextField_telefono.getText();
+        String email = viewProveedores.jTextField_email.getText();
+        String Datos = "'"+nombre+"','"+rfc+"','"+calle+"',"+no+",'"+colonia+"','"+ciudad+"','"+estado+"','"+nombre_contacto+"',"+telefono+",'"+email+"'";
+        String Campos ="nombre,rfc,calle,no,colonia,ciudad,estado,nombre_contacto,telefono,email";
+        String sDriver = "com.mysql.jdbc.Driver";
+        String sURL = "jdbc:mysql://localhost:3306/tecno_phone";
+        String sql = "insert into proveedores("+Campos+") values ("+Datos+");";
+        Connection con = null;
+        Class.forName(sDriver).newInstance();
+        con = DriverManager.getConnection(sURL,"root","1234");
+        System.out.println(sql);
+        Statement stmt = con.prepareStatement(sql);
+        stmt.executeUpdate(sql);
+        viewProveedores.revalidate();
     } 
 
     private void initView() {
@@ -155,6 +183,15 @@ public class ControllerProveedores {
     }
     private void conexion(){
         //
+    }
+    private void mostrarTodo(){
+        
+    }
+    private void ocultarTodoMenosId(){
+        
+    }
+    private void ocultarId(){
+        
     }
     private void sandwichActionPerformed(){
         this.viewMain.setContentPane(null);

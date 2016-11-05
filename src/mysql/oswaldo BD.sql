@@ -119,7 +119,7 @@ CREATE TABLE `prductos` (
 --
 
 CREATE TABLE `proveedores` (
-  `id_proveedor` mediumint(8) NOT NULL,
+  `id_proveedor` mediumint(8) NOT NULL auto_increment primary key,
   `nombre` varchar(25) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `rfc` varchar(20) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
   `calle` varchar(25) CHARACTER SET utf8 COLLATE utf8_spanish_ci DEFAULT NULL,
