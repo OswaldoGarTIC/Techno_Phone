@@ -56,7 +56,7 @@ public class ControllerProveedores {
                 tarea = "agregar";
                 mostrarPanelMedio();
             }else if(evt.getComponent()==viewProveedores.jLabe_lEditar){
-                tarea="ediar";
+                tarea="editar";
                 mostrarPanelMedio();
             }
             else if(evt.getComponent()==viewProveedores.jLabel_Eliminar){
@@ -68,6 +68,7 @@ public class ControllerProveedores {
             }
             JLabel jlabel = (JLabel) evt.getComponent();
             jlabel.setForeground(Color.darkGray);
+            viewProveedores.jLabel_aceptar.setText(tarea);
         }
         @Override
         public void mouseEntered(MouseEvent men){

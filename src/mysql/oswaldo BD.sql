@@ -19,9 +19,20 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `acme`
 --
-
 -- --------------------------------------------------------
 
+--
+-- Estructura de tabla para la tabla `clientes`
+--
+
+CREATE TABLE usuarios (
+    id_usuarios int(4) not null auto_increment primary key,
+    nombre varchar(15) not null,
+    contrasena varchar(15) not null
+    );
+
+-- --------------------------------------------------------
+-- insert into usuarios(nombre,contrasena) values("margarito","1234");
 --
 -- Estructura de tabla para la tabla `clientes`
 --
@@ -122,7 +133,7 @@ CREATE TABLE `proveedores` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 -- --------------------------------------------------------
-
+insert into proveedores values(1,"LG","VECJ880326XXX","Camino ahuehuetitla",105,"Las presas","Tulancingo","Hidalgo","Hugo Godinez",7751575043,"Hu_Go@lg.mx.com");
 --
 -- Estructura de tabla para la tabla `ventas`
 --

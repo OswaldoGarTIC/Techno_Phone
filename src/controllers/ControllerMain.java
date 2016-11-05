@@ -9,7 +9,7 @@ import java.awt.Color;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.sql.Connection;
-import java.sql.PreparedStatement;
+import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -109,19 +109,22 @@ public class ControllerMain{
     public void tryLogg(){
         if(viewMain.jLabel_Sesiones_Usuarios.getText().length()>0 && viewMain.jPasswordField_Contrasena.getPassword().length>0){
         try{
-            Connection con = Db.connect();
-            Statement s =  con.createStatement();
-            ResultSet r = s.executeQuery("select * from usuarios where nombre=\""+viewMain.jLabel_Sesiones_Usuarios.getText()+"\" and contrasena=\""+viewMain.jPasswordField_Contrasena.getPassword()+"\" ");
-            boolean found = false;
-            int user_id = 0;
-            while(r.next()){ found=true; user_id = r.getInt("id"); }
-            if(found){
-                JOptionPane.showMessageDialog(viewMain, "Acceso correcto");
+            String usuario = viewMain.jTextField_Usuario.getText();
+            String contrasena = new String(viewMain.jPasswordField_Contrasena.getPassword());
+            Connection unaConexion  = DriverManager.getConnection ("jdbc:mysql://localhost:3306/tecno_phone","root","1234");
+            // Preparamos la consulta
+            Statement instruccionSQL = unaConexion.createStatement();
+            ResultSet resultadosConsulta = instruccionSQL.executeQuery ("SELECT * FROM usuarios WHERE nombre='"+usuario+"' AND contrasena='"+contrasena+"';");
+ 
+            if( resultadosConsulta.first() ){
+                JOptionPane.showMessageDialog(viewMain, "Acceso Correcto"); 
+                viewMain.jPanel_Loggin.setVisible(false);
+                viewMain.jLabel_Aceptar.setText(usuario);
             }else{
-                JOptionPane.showMessageDialog(viewMain, "Usuario o contraseña incorrectos");
+                JOptionPane.showMessageDialog(viewMain, "Error: Usuario o Contraseña Incorrecto");
             }
-        }catch(SQLException e){
-        System.out.println(e.getMessage());
+        }catch(Exception e){
+            System.out.println("error"+e);
         }
         }else{
             JOptionPane.showMessageDialog(viewMain, "No debes dejar campos vacios !!");        

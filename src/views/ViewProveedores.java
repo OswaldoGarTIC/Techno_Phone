@@ -31,20 +31,20 @@ public class ViewProveedores extends javax.swing.JPanel {
     }
     
     private String[] getColumnas(){
-        String columna[] = new String[]{"id_proveedor","nombre","telefono"};
+        String columna[] = new String[]{"id_proveedor","nombre","rfc","calle","no","colonia","ciudad","estado","nombre_contacto","telefono","email"};
         return columna;
     }
     
     private void setFilas() throws SQLException{
         try{
-            String sql = "select id_proveedor,nombre,telefono from proveedores;";
+            String sql = "select id_proveedor,nombre,rfc,calle,no,colonia,ciudad,estado,nombre_contacto,telefono,email from proveedores;";
             
             PreparedStatement us = con.conexion().prepareStatement(sql);
             try (ResultSet res = us.executeQuery()) {
-                Object datos[] = new Object[3];//Numero de columnas de la consulta
+                Object datos[] = new Object[11];//Numero de columnas de la consulta
                 
                 while (res.next()){
-                    for(int i = 0;i<3;i++){
+                    for(int i = 0;i<datos.length;i++){
                         datos[i] = res.getObject(i+1);
                     }
                     modeloTabla.addRow(datos);
