@@ -75,6 +75,9 @@ public class ControllerMain{
             if(evt.getComponent()==viewMain.jLabel_Aceptar){
                 tryLogg();
             }
+            if(evt.getComponent()==viewMain.jLabel_Catalogos_Clientes){
+               jLabel_Catalogos_Clientes_ActionPerformed(); 
+            }
             JLabel jlabel = (JLabel) evt.getComponent();
             jlabel.setForeground(Color.darkGray);
         }
@@ -102,9 +105,8 @@ public class ControllerMain{
         this.viewMain.repaint();
     }
     public void jLabel_Catalogos_Clientes_ActionPerformed(){
-        this.viewMain.setContentPane(controllerProveedores.viewProveedores);
-        this.viewMain.revalidate();
-        this.viewMain.repaint();
+        View_Clientes JFrame = new View_Clientes();
+        JFrame.setVisible(true);
     }
     public void tryLogg(){
         if(viewMain.jLabel_Sesiones_Usuarios.getText().length()>0 && viewMain.jPasswordField_Contrasena.getPassword().length>0){
