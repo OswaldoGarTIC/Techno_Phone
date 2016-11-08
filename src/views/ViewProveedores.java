@@ -35,8 +35,9 @@ public class ViewProveedores extends javax.swing.JPanel {
         return columna;
     }
     
-    private void setFilas() throws SQLException{
+    public void setFilas() throws SQLException{
         try{
+            
             String sql = "select id_proveedor,nombre,rfc,calle,no,colonia,ciudad,estado,nombre_contacto,telefono,email from proveedores;";
             
             PreparedStatement us = con.conexion().prepareStatement(sql);
@@ -236,6 +237,11 @@ public class ViewProveedores extends javax.swing.JPanel {
         );
 
         jLabel_Sandwich.setIcon(new javax.swing.ImageIcon(getClass().getResource("/media/sandwich.png"))); // NOI18N
+        jLabel_Sandwich.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel_SandwichMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel_SuperiorLayout = new javax.swing.GroupLayout(jPanel_Superior);
         jPanel_Superior.setLayout(jPanel_SuperiorLayout);
@@ -515,6 +521,10 @@ public class ViewProveedores extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField_numeroActionPerformed
 
+    private void jLabel_SandwichMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel_SandwichMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jLabel_SandwichMouseClicked
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel jLabe_lEditar;
@@ -548,7 +558,7 @@ public class ViewProveedores extends javax.swing.JPanel {
     public javax.swing.JPanel jPanel_aceptar;
     public javax.swing.JPanel jPanel_cancelar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable_Proveedores;
+    public javax.swing.JTable jTable_Proveedores;
     public javax.swing.JTextField jTextField_calle;
     public javax.swing.JTextField jTextField_ciudad;
     public javax.swing.JTextField jTextField_colonia;

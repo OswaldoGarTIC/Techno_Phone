@@ -113,7 +113,7 @@ public class ControllerMain{
         try{
             String usuario = viewMain.jTextField_Usuario.getText();
             String contrasena = new String(viewMain.jPasswordField_Contrasena.getPassword());
-            Connection unaConexion  = DriverManager.getConnection ("jdbc:mysql://localhost:3306/tecno_phone","root","1234");
+            Connection unaConexion  = DriverManager.getConnection ("jdbc:mysql://localhost:3306/acme","root","");
             // Preparamos la consulta
             Statement instruccionSQL = unaConexion.createStatement();
             ResultSet resultadosConsulta = instruccionSQL.executeQuery ("SELECT * FROM usuarios WHERE nombre='"+usuario+"' AND contrasena='"+contrasena+"';");
