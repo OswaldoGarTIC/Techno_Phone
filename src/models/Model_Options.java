@@ -5,11 +5,12 @@
  */
 package models;
 import views.View_Clients;
+
 /**
  *
  * @author BLABPC23
  */
-public class ModelClientes {
+public class Model_Options {
     private View_Clients viewClientes = new View_Clients();
     private String nombre = "";
             private String ApPaterno = "";
@@ -191,3 +192,4 @@ public class ModelClientes {
         this.Estado = Estado;
     }
 }
+

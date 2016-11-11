@@ -4,143 +4,18 @@
  * and open the template in the editor.
  */
 package views;
-
-import java.sql.DriverManager;
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
-import javax.swing.JOptionPane;
-
-
+import controllers.Controller_Options;
 /**
  *
- *
- *
- * @author Nancy04
+ * @author 5
  */
 public class View_Options extends javax.swing.JFrame {
-
-    private Connection conexion;
-    private Statement st;
-    private ResultSet rs;
-    public String search = "";
-    public String nombre;
-    public String ApPaterno;
-    public String ApMaterno;
-    public String Tel;
-    public String Email;
-    public String Rfc;
-    public String Street;
-    public String No;
-    public String Col;
-    public String City;
-    public String State;
-    
 
     /**
      * Creates new form View_Options
      */
-    public void Conectar() {
-        try {
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/acme", "root", "");
-            st = conexion.createStatement();
-
-            rs = st.executeQuery("Select * from clientes");
-
-            rs.next();
-
-        } catch (SQLException err) {
-            JOptionPane.showMessageDialog(null, "Error " + err.getMessage());
-        }
-
-    }
-
-    public void Buscar() {
-        search = Jtf_Search.getText();
-        try {
-            rs = st.executeQuery("Select * from clientes where id_cliente = '" + search + "'");
-            rs.next();
-
-            this.Jtf_Id.setText(rs.getString("id_cliente"));
-            this.Jtf_Name.setText(rs.getString("nombre"));
-            this.Jtf_ApPaterno.setText(rs.getString("ap_paterno"));
-            this.Jtf_ApMaterno.setText(rs.getString("ap_materno"));
-            this.Jtf_Tel.setText(rs.getString("telefono"));
-            this.Jtf_Email.setText(rs.getString("email"));
-            this.Jtf_Rfc.setText(rs.getString("rfc"));
-            this.Jtf_Street.setText(rs.getString("calle"));
-            this.Jtf_No.setText(rs.getString("no"));
-            this.Jtf_Col.setText(rs.getString("colonia"));
-            this.Jtf_City.setText(rs.getString("ciudad"));
-            this.Jtf_State.setText(rs.getString("estado"));
-
-            Jlb_Read.setVisible(true);
-            Jlb_Edit.setVisible(false);
-
-            this.Jtf_Id.setEditable(false);
-            this.Jtf_Name.setEditable(false);
-            this.Jtf_ApPaterno.setEditable(false);
-            this.Jtf_ApMaterno.setEditable(false);
-            this.Jtf_Tel.setEditable(false);
-            this.Jtf_Email.setEditable(false);
-            this.Jtf_Rfc.setEditable(false);
-            this.Jtf_Street.setEditable(false);
-            this.Jtf_No.setEditable(false);
-            this.Jtf_Col.setEditable(false);
-            this.Jtf_City.setEditable(false);
-            this.Jtf_State.setEditable(false);
-
-        } catch (SQLException err) {
-            JOptionPane.showMessageDialog(null, "Error " + err.getMessage());
-        }
-    }
-
-    public void Editar() {
-        this.Jtf_Id.setEditable(true);
-        this.Jtf_Name.setEditable(true);
-        this.Jtf_ApPaterno.setEditable(true);
-        this.Jtf_ApMaterno.setEditable(true);
-        this.Jtf_Tel.setEditable(true);
-        this.Jtf_Email.setEditable(true);
-        this.Jtf_Rfc.setEditable(true);
-        this.Jtf_Street.setEditable(true);
-        this.Jtf_No.setEditable(true);
-        this.Jtf_Col.setEditable(true);
-        this.Jtf_City.setEditable(true);
-        this.Jtf_State.setEditable(true);
-        Jlb_Read.setVisible(false);
-        Jlb_Edit.setVisible(true);
-    }
-
-    public void Modificar() {
-       nombre=this.Jtf_Name.getText();
-       ApPaterno=this.Jtf_ApPaterno.getText();
-       ApMaterno=this.Jtf_ApMaterno.getText();
-       Tel=this.Jtf_Tel.getText();
-       Email=this.Jtf_Email.getText();
-       Rfc=this.Jtf_Rfc.getText();
-       Street=this.Jtf_Street.getText();
-       No=this.Jtf_No.getText();
-       Col=this.Jtf_Col.getText();
-       City=this.Jtf_City.getText();
-       State=this.Jtf_State.getText();
-       
-       
-        try {
-            st.executeUpdate("update clientes set nombre ='"+nombre+"', ap_paterno= '"+ApPaterno+"', ap_materno= '"+ApMaterno+"', telefono= '"+Tel+"', email= '"+Email+"', rfc= '"+Rfc+"', calle= '"+Street+"', no= '"+No+"', colonia= '"+Col+"', ciudad= '"+City+"', estado= '"+State+"' where id_cliente ='" + search + "'");
-
-        } catch (SQLException err) {
-            JOptionPane.showMessageDialog(null, "Error " + err.getMessage());
-        }
-        View_Clientes JFrame = new View_Clientes();
-        JFrame.setVisible(true);
-    }
-
     public View_Options() {
         initComponents();
-        Jlb_Read.setVisible(false);
-        Jlb_Edit.setVisible(false);
     }
 
     /**
@@ -152,45 +27,52 @@ public class View_Options extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        Opciones = new javax.swing.ButtonGroup();
+        jLabel13 = new javax.swing.JLabel();
+        Jtf_Name = new javax.swing.JTextField();
+        Jtf_ApPaterno = new javax.swing.JTextField();
         jPanel3 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        Jtf_ApMaterno = new javax.swing.JTextField();
+        Jtf_Tel = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        Jtf_Email = new javax.swing.JTextField();
         Jbt_Search = new javax.swing.JButton();
-        Jbt_Edit = new javax.swing.JButton();
-        Jtf_Col = new javax.swing.JTextField();
-        Jtf_City = new javax.swing.JTextField();
-        jLabel3 = new javax.swing.JLabel();
-        Jtf_State = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
+        Jtf_Rfc = new javax.swing.JTextField();
+        Jlb_Read = new javax.swing.JLabel();
+        Jbt_Edit = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
+        Jtf_Col = new javax.swing.JTextField();
+        Jlb_Edit = new javax.swing.JLabel();
         Jbt_Save = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        Jtf_Name = new javax.swing.JTextField();
-        Jtf_ApPaterno = new javax.swing.JTextField();
-        Jtf_ApMaterno = new javax.swing.JTextField();
-        Jtf_Tel = new javax.swing.JTextField();
-        Jtf_Email = new javax.swing.JTextField();
-        Jtf_Rfc = new javax.swing.JTextField();
         Jtf_Street = new javax.swing.JTextField();
         Jtf_No = new javax.swing.JTextField();
+        Jtf_City = new javax.swing.JTextField();
         Jtf_Search = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
+        Jtf_State = new javax.swing.JTextField();
         Jtf_Id = new javax.swing.JTextField();
-        Jlb_Read = new javax.swing.JLabel();
-        Jlb_Edit = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
+            }
+        });
+
+        jLabel13.setText("Estado");
+
+        Jtf_Name.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Jtf_NameActionPerformed(evt);
             }
         });
 
@@ -226,6 +108,10 @@ public class View_Options extends javax.swing.JFrame {
             }
         });
 
+        jLabel4.setText("Apellido paterno");
+
+        Jlb_Read.setText("Modo de solo lectura.");
+
         Jbt_Edit.setText("Editar");
         Jbt_Edit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -233,17 +119,15 @@ public class View_Options extends javax.swing.JFrame {
             }
         });
 
+        jLabel5.setText("Apellido materno");
+
         Jtf_Col.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 Jtf_ColActionPerformed(evt);
             }
         });
 
-        jLabel3.setText("Nombre");
-
-        jLabel4.setText("Apellido paterno");
-
-        jLabel5.setText("Apellido materno");
+        Jlb_Edit.setText("Modo de editar.");
 
         Jbt_Save.setText("Guardar");
         Jbt_Save.addActionListener(new java.awt.event.ActionListener() {
@@ -262,23 +146,13 @@ public class View_Options extends javax.swing.JFrame {
 
         jLabel10.setText("Numero");
 
-        jLabel11.setText("Colonia");
-
-        jLabel12.setText("Ciudad");
-
-        jLabel13.setText("Estado");
-
-        Jtf_Name.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                Jtf_NameActionPerformed(evt);
-            }
-        });
+        jLabel3.setText("Nombre");
 
         jLabel14.setText("id");
 
-        Jlb_Read.setText("Modo de solo lectura.");
+        jLabel11.setText("Colonia");
 
-        Jlb_Edit.setText("Modo de editar.");
+        jLabel12.setText("Ciudad");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -336,7 +210,7 @@ public class View_Options extends javax.swing.JFrame {
                         .addComponent(Jbt_Search)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(Jbt_Edit)))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -400,41 +274,39 @@ public class View_Options extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel13)
                     .addComponent(Jtf_State, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(80, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void Jtf_ColActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jtf_ColActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_Jtf_ColActionPerformed
-
     private void Jtf_NameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jtf_NameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Jtf_NameActionPerformed
 
-    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
-        // TODO add your handling code here:
-        Conectar();
-        View_Clientes JFrame = new View_Clientes();
-        JFrame.setVisible(false);
-    }//GEN-LAST:event_formWindowActivated
-
     private void Jbt_SearchMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jbt_SearchMouseClicked
         // TODO add your handling code here:
-        Buscar();
+
     }//GEN-LAST:event_Jbt_SearchMouseClicked
 
     private void Jbt_EditMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Jbt_EditMouseClicked
         // TODO add your handling code here:
-        Editar();
+
     }//GEN-LAST:event_Jbt_EditMouseClicked
+
+    private void Jtf_ColActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jtf_ColActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Jtf_ColActionPerformed
 
     private void Jbt_SaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jbt_SaveActionPerformed
         // TODO add your handling code here:
-        Modificar();
+
     }//GEN-LAST:event_Jbt_SaveActionPerformed
+
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_formWindowActivated
 
     /**
      * @param args the command line arguments
@@ -461,7 +333,6 @@ public class View_Options extends javax.swing.JFrame {
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(View_Options.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
@@ -491,7 +362,6 @@ public class View_Options extends javax.swing.JFrame {
     public javax.swing.JTextField Jtf_State;
     public javax.swing.JTextField Jtf_Street;
     public javax.swing.JTextField Jtf_Tel;
-    private javax.swing.ButtonGroup Opciones;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -508,4 +378,6 @@ public class View_Options extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel3;
     // End of variables declaration//GEN-END:variables
+
+   
 }

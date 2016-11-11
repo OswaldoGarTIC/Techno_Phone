@@ -208,10 +208,6 @@ public class ControllerProveedores {
         System.out.println(sql);
         Statement stmt = con.prepareStatement(sql);
         stmt.executeUpdate(sql);
-        viewProveedores.setVisible(false);
-        ViewProveedores viewProveedores = new ViewProveedores();
-        viewProveedores.setVisible(true);
-        
     } 
 
     private void initView() {
